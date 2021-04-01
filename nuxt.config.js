@@ -52,4 +52,9 @@ export default {
   build: {
     extractCSS: true,
   },
+  vue: {
+    config: {
+      devtools: process.env.NODE_ENV !== 'production',
+    },
+  },
 }
