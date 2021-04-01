@@ -2,7 +2,9 @@
   <div class="book-cover">
     <img :src="$book.cover" :alt="`Capa do livro ${$book.title}`" />
 
-    <NuxtLink :to="`/book/${$book.id}/read`"> Ler livro </NuxtLink>
+    <NuxtLink :to="`/book/${$book.id}/read`" class="read-button">
+      Ler livro
+    </NuxtLink>
   </div>
 </template>
 
@@ -40,5 +42,19 @@ export default Vue.extend({
       opacity: 0.89;
     }
   }
+}
+
+.read-button {
+  background: #292929;
+  color: #f7f7f7;
+  text-transform: uppercase;
+  font-weight: 700;
+  width: 100%;
+  height: 42px;
+  font-size: 1.1rem;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
 }
 </style>

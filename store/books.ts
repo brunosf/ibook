@@ -5,7 +5,6 @@ import { $axios } from '@/utils/api'
 interface Show {
   id: Book['id']
 }
-
 @Module({ name: 'books', stateFactory: true, namespaced: true })
 export default class Books extends VuexModule {
   private books = [] as Book[]
