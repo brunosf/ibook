@@ -1,6 +1,6 @@
 import { Action, Module, Mutation, VuexModule } from 'vuex-module-decorators'
 import { Book } from '@/models'
-import { $axios } from '@/utils/api'
+import { $axios } from '@/utils/nuxt-instance'
 
 interface Show {
   id: Book['id']
