@@ -57,9 +57,7 @@ export default Vue.extend({
           throw new Error(this.error)
         }
 
-        const token = await this.$axios.$post('/login', this.form)
-        this.$cookies.set('token', token)
-        auth.create(token)
+        await auth.create(this.form)
 
         this.$router.push({ name: 'dashboard' })
       } catch (error) {

@@ -1,8 +1,7 @@
 import { Middleware } from '@nuxt/types'
 
 const authMiddleware: Middleware = ({ store, redirect, app, route }) => {
-  const authenthicated =
-    app.$cookies.get('token') || store.getters['auth/$accessToken']
+  const authenthicated = app.$cookies.get('token')
 
   if (!authenthicated) {
     if (route.name === 'login') {
