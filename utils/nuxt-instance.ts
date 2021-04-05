@@ -3,14 +3,14 @@ import { NuxtAxiosInstance } from '@nuxtjs/axios'
 import { NuxtCookies } from 'cookie-universal-nuxt'
 
 let $axios: NuxtAxiosInstance
-let $cookie: NuxtCookies
+let $cookies: NuxtCookies
 
 export function initializeAxios(axiosInstance: NuxtAxiosInstance) {
   $axios = axiosInstance
 }
 
 export function initializeCookies(cookiesInstance: NuxtCookies) {
-  $cookie = cookiesInstance
+  $cookies = cookiesInstance
 }
 
-export { $axios, $cookie }
+export { $axios, $cookies }

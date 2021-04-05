@@ -16,7 +16,6 @@ import { auth } from '@/store'
 export default Vue.extend({
   methods: {
     logout() {
-      this.$cookies.remove('token')
       auth.destroy()
       this.$router.push({ name: 'login' })
     },
