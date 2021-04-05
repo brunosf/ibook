@@ -57,11 +57,12 @@ export default Vue.extend({
           throw new Error(this.error)
         }
 
-        const token = await this.$axios.$post('/login', this.form)
-        this.$cookies.set('token', token)
-        auth.create(token)
+        const { accessToken } = await this.$axios.$post('/login', this.form)
 
-        this.$router.push({ name: 'dashboard' })
+        this.$cookies.set('token', accessToken)
+        auth.create(accessToken)
+
+        // this.$router.push({ name: 'dashboard' })
       } catch (error) {
         this.loading = false
         if (!this.error) {

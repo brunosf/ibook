@@ -21,6 +21,8 @@ export default class Auth extends VuexModule {
 
   @Action({ commit: 'SET_ACCESS_TOKEN' })
   public create(token: string) {
+    console.log($cookie)
+
     return token
   }
 
